@@ -6,7 +6,7 @@
     <title>NovaFlow AI - Automatisez. Gagnez du temps.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -17,6 +17,7 @@
             --text-gray: #94A3B8;
             --bg-light: #FFFFFF;
             --text-dark: #0F172A;
+            --purple-accent: #8B5CF6;
         }
 
         body {
@@ -49,10 +50,6 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 14px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--text-light);
         }
 
         .btn-call {
@@ -74,13 +71,13 @@
 
         h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 48px;
+            font-size: 44px;
             line-height: 1.2;
             margin-bottom: 20px;
         }
 
         h1 span {
-            color: #8B5CF6;
+            color: var(--purple-accent);
         }
 
         .hero p {
@@ -115,7 +112,7 @@
             font-weight: 600;
         }
 
-        /* --- NOUVELLE SECTION BLANCHE --- */
+        /* --- SECTION BLANCHE (DEFIS & SOLUTIONS) --- */
         .solutions-section {
             background-color: var(--bg-light);
             color: var(--text-dark);
@@ -140,7 +137,7 @@
         }
 
         .card {
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             background: #F8FAFC;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -166,7 +163,173 @@
 
         .divider {
             border-top: 2px dashed #E2E8F0;
-            margin: 40px 0;
+            margin: 50px 0;
+        }
+
+        /* --- SECTION NOS OFFRES --- */
+        .pricing-section {
+            background-color: #F8FAFC;
+            color: var(--text-dark);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #E2E8F0;
+            position: relative;
+            text-align: left;
+        }
+
+        .price-card.popular {
+            border: 2px solid var(--purple-accent);
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--purple-accent);
+            color: white;
+            padding: 5px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .price-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .price-sub {
+            color: #64748B;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .price-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .price-features li {
+            font-size: 14px;
+            color: #334155;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-price {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid var(--blue-primary);
+        }
+
+        .btn-price.outline {
+            color: var(--blue-primary);
+            background: transparent;
+        }
+
+        .btn-price.filled {
+            color: white;
+            background: var(--purple-accent);
+            border-color: var(--purple-accent);
+        }
+
+        .btn-price.dark {
+            color: white;
+            background: var(--bg-dark);
+            border-color: var(--bg-dark);
+        }
+
+        /* --- SECTION FINALE & CTA --- */
+        .footer-cta {
+            background-color: #050505;
+            padding: 60px 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            color: var(--blue-primary);
+            margin: 0 0 5px 0;
+        }
+
+        .stat-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-banner {
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-banner h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .footer-banner p {
+            color: #E2E8F0;
+            margin: 0 0 25px 0;
+            font-size: 16px;
+        }
+
+        .btn-final {
+            display: inline-block;
+            background: var(--purple-accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -187,7 +350,6 @@
     <section class="hero">
         <h1>Gagnez 10h+ par semaine<br>grâce à <span>l'intelligence artificielle</span></h1>
         <p>Nous automatisons vos tâches répétitives pour que vous puissiez vous concentrer sur l'essentiel.</p>
-        
         <div class="cta-container">
             <a href="#" class="btn-primary">Réserver un appel gratuit</a>
             <a href="#" class="btn-secondary">Découvrir nos solutions</a>
@@ -196,57 +358,130 @@
 
     <section class="solutions-section">
         <h2 class="section-title">Vos défis quotidiens</h2>
-        
         <div class="grid-container">
             <div class="card">
                 <div class="card-icon">✉️</div>
                 <h3>Trop d'e-mails</h3>
-                <p>Trop d'e-mails à gérer chaque jour.</p>
+                <p>Trop d'e-mails à trier et traiter chaque jour.</p>
             </div>
             <div class="card">
                 <div class="card-icon">⏳</div>
                 <h3>Perte de temps</h3>
-                <p>Perte de temps sur des tâches répétitives.</p>
+                <p>Heures perdues sur des actions répétitives.</p>
             </div>
             <div class="card">
                 <div class="card-icon">📄</div>
                 <h3>Devis & Factures</h3>
-                <p>Devis et factures chronophages.</p>
+                <p>Création et relance de documents fastidieuses.</p>
             </div>
             <div class="card">
                 <div class="card-icon">👥</div>
                 <h3>Réponses lentes</h3>
-                <p>Réponses clients trop lentes.</p>
+                <p>Risque de perdre des prospects par manque de réactivité.</p>
             </div>
         </div>
 
         <div class="divider"></div>
 
         <h2 class="section-title">Notre Solution</h2>
-
         <div class="grid-container">
             <div class="card" style="background: #EFF6FF;">
                 <div class="card-icon">⚙️</div>
                 <h3>Automatisation</h3>
-                <p>Automatisation intelligente de vos processus.</p>
+                <p>Vos flux opérationnels connectés et autonomes.</p>
             </div>
             <div class="card" style="background: #EFF6FF;">
                 <div class="card-icon">🤖</div>
                 <h3>Agents IA</h3>
-                <p>Agents IA qui travaillent 24h/24.</p>
+                <p>Des assistants virtuels disponibles 24h/24.</p>
             </div>
             <div class="card" style="background: #EFF6FF;">
                 <div class="card-icon">📊</div>
                 <h3>Données</h3>
-                <p>Données centralisées et accessibles en un clic.</p>
+                <p>Toutes vos informations accessibles en un clic.</p>
             </div>
             <div class="card" style="background: #EFF6FF;">
                 <div class="card-icon">⏱️</div>
-                <h3>Plus de temps</h3>
-                <p>Plus de temps pour ce qui compte vraiment.</p>
+                <h3>Focus croissance</h3>
+                <p>Libérez du temps pour ce qui compte vraiment.</p>
             </div>
         </div>
     </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title">Nos Offres</h2>
+        <div class="pricing-grid">
+            
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">990 €</div>
+                <div class="price-sub">Paiement unique</div>
+                <ul class="price-features">
+                    <li>✅ Audit IA de votre entreprise</li>
+                    <li>✅ Chatbot IA personnalisé</li>
+                    <li>✅ Automatisation des e-mails</li>
+                    <li>✅ Automatisation des devis</li>
+                    <li>✅ Formation de 1 heure</li>
+                </ul>
+                <a href="#" class="btn-price outline">Choisir Starter</a>
+            </div>
+
+            <div class="price-card popular">
+                <div class="badge">Populaire</div>
+                <h3>Business</h3>
+                <div class="price">2 490 €</div>
+                <div class="price-sub">Paiement unique</div>
+                <ul class="price-features">
+                    <li>🚀 <strong>Pack Starter inclus, plus :</strong></li>
+                    <li>✅ Automatisation CRM</li>
+                    <li>✅ Génération de devis automatiques</li>
+                    <li>✅ Prise de rendez-vous automatique</li>
+                    <li>✅ Tableaux de bord personnalisés</li>
+                    <li>✅ Formation de 2 heures</li>
+                </ul>
+                <a href="#" class="btn-price filled">Choisir Business</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Premium</h3>
+                <div class="price">4 990 €</div>
+                <div class="price-sub">Paiement unique</div>
+                <ul class="price-features">
+                    <li>💎 <strong>Pack Business inclus, plus :</strong></li>
+                    <li>✅ Automations sur mesure</li>
+                    <li>✅ Agent IA personnalisé</li>
+                    <li>✅ Documentation complète</li>
+                    <li>✅ Formation complète</li>
+                    <li>✅ Support prioritaire 7j/7</li>
+                </ul>
+                <a href="#" class="btn-price dark">Choisir Premium</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-cta">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4>+10h</h4>
+                <p>Gagnées par semaine</p>
+            </div>
+            <div class="stat-item">
+                <h4>-30%</h4>
+                <p>De coûts opérationnels</p>
+            </div>
+            <div class="stat-item">
+                <h4>+25%</h4>
+                <p>De productivité en moyenne</p>
+            </div>
+        </div>
+
+        <div class="footer-banner">
+            <h3>Prêt à passer à l'action ?</h3>
+            <p>Réservez votre appel stratégique gratuit dès maintenant pour automatiser votre business.</p>
+            <a href="#" class="btn-final">Réserver mon appel</a>
+        </div>
+    </footer>
 
 </body>
 </html>
