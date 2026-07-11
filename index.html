@@ -15,6 +15,8 @@
             --blue-light: #005CF6;
             --text-light: #F8FAFC;
             --text-gray: #94A3B8;
+            --bg-light: #FFFFFF;
+            --text-dark: #0F172A;
         }
 
         body {
@@ -78,7 +80,7 @@
         }
 
         h1 span {
-            color: #8B5CF6; /* Couleur violette pour l'intelligence artificielle */
+            color: #8B5CF6;
         }
 
         .hero p {
@@ -112,6 +114,60 @@
             text-decoration: none;
             font-weight: 600;
         }
+
+        /* --- NOUVELLE SECTION BLANCHE --- */
+        .solutions-section {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 8px;
+            background: #F8FAFC;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+
+        .card p {
+            color: #64748B;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .divider {
+            border-top: 2px dashed #E2E8F0;
+            margin: 40px 0;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +191,60 @@
         <div class="cta-container">
             <a href="#" class="btn-primary">Réserver un appel gratuit</a>
             <a href="#" class="btn-secondary">Découvrir nos solutions</a>
+        </div>
+    </section>
+
+    <section class="solutions-section">
+        <h2 class="section-title">Vos défis quotidiens</h2>
+        
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-icon">✉️</div>
+                <h3>Trop d'e-mails</h3>
+                <p>Trop d'e-mails à gérer chaque jour.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⏳</div>
+                <h3>Perte de temps</h3>
+                <p>Perte de temps sur des tâches répétitives.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h3>Devis & Factures</h3>
+                <p>Devis et factures chronophages.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👥</div>
+                <h3>Réponses lentes</h3>
+                <p>Réponses clients trop lentes.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title">Notre Solution</h2>
+
+        <div class="grid-container">
+            <div class="card" style="background: #EFF6FF;">
+                <div class="card-icon">⚙️</div>
+                <h3>Automatisation</h3>
+                <p>Automatisation intelligente de vos processus.</p>
+            </div>
+            <div class="card" style="background: #EFF6FF;">
+                <div class="card-icon">🤖</div>
+                <h3>Agents IA</h3>
+                <p>Agents IA qui travaillent 24h/24.</p>
+            </div>
+            <div class="card" style="background: #EFF6FF;">
+                <div class="card-icon">📊</div>
+                <h3>Données</h3>
+                <p>Données centralisées et accessibles en un clic.</p>
+            </div>
+            <div class="card" style="background: #EFF6FF;">
+                <div class="card-icon">⏱️</div>
+                <h3>Plus de temps</h3>
+                <p>Plus de temps pour ce qui compte vraiment.</p>
+            </div>
         </div>
     </section>
 
